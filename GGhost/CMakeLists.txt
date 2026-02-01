@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.10)
+project(GGhost)
+enable_language(ASM_MASM)
+include_directories(include)
+add_library(GGhost STATIC src/ggh.cpp src/sys.cpp src/ic.cpp src/obf.cpp src/spf.cpp src/syscalls.asm)
