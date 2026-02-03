@@ -170,6 +170,7 @@ namespace core {
                         //npcs
                         std::vector<instance_t> npcs_copy = cached_npcs;
                         for (auto& npc : npcs_copy) {
+                            if (npc.self == lp_char.self) continue;
                             instance_t hum = npc.find_first_child_of_class("Humanoid");
                             if (!hum.self || hum.get_health() <= 0) continue;
                             instance_t root(0);
